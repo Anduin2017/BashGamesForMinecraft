@@ -64,8 +64,8 @@ sudo ufw allow 8123
 
 tmux send-keys -t mc "say 服务器已经成功设置为自由探索模式！" Enter
 
-centerX="2484"
-centerZ="906"
+centerX="3060"
+centerZ="-1097"
 centerY="65"
 
 # 提前确定中心点。不要告诉任何人。
@@ -374,8 +374,8 @@ sleep 90
 tmux send-keys -t mc "say 目前世界宽度：100。10秒后开始缩小边界。" Enter
 sleep 10
 tmux send-keys -t mc "say 距离比赛开始已经过去50分钟。开始缩小边界！新宽度：20" Enter
-tmux send-keys -t mc "worldborder add -80 15" Enter
-sleep 15
+tmux send-keys -t mc "worldborder add -80 40" Enter
+sleep 40
 tmux send-keys -t mc "say 距离比赛开始已经过去50分钟。边界缩小结束！当前宽度：20。" Enter
 sleep 2
 tmux send-keys -t mc "say 所有玩家必须决出胜负！" Enter
