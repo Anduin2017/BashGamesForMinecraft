@@ -31,7 +31,7 @@ sleep 1
 
 tmux send-keys -t mc "say 正在重置复活点……" Enter
 sleep 1
-tmux send-keys -t mc "setworldspawn $center" Enter
+tmux send-keys -t mc "setworldspawn 594 64 -1527" Enter # 提前挑选好世界地图的中心。
 sleep 1
 
 tmux send-keys -t mc "say 正在重置玩家的复活点……" Enter
@@ -59,10 +59,13 @@ sleep 1
 tmux send-keys -t mc "execute as @a at @a run attribute @s minecraft:generic.max_health base set 40" Enter
 sleep 1
 
+tmux send-keys -t mc "say 正在开启Web地图功能……" Enter
+sudo ufw allow 8123
+
 tmux send-keys -t mc "say 服务器已经成功设置为自由探索模式！" Enter
 
-centerX="3441"
-centerZ="-1183"
+centerX="2484"
+centerZ="906"
 centerY="65"
 
 # 提前确定中心点。不要告诉任何人。
@@ -106,6 +109,10 @@ tmux send-keys -t mc "say 初始化饥饿游戏……" Enter
 sleep 1
 
 
+tmux send-keys -t mc "say 正在关闭Web地图功能……" Enter
+sudo ufw deny 8123
+sleep 1
+
 tmux send-keys -t mc "say 正在调整时间……" Enter
 sleep 1
 tmux send-keys -t mc "time set 2000" Enter # 凌晨
@@ -119,6 +126,11 @@ sleep 1
 tmux send-keys -t mc "say 正在将所有玩家转移到严肃室。。。" Enter
 sleep 3
 tmux send-keys -t mc "tp @a 562 35 -1681" Enter # 提前修好一个放满床的严肃室。
+sleep 1
+
+tmux send-keys -t mc "say 正在禁用PVP。。。" Enter
+sleep 1
+tmux send-keys -t mc "effect give @a weakness 9999 255 true" Enter
 sleep 1
 
 tmux send-keys -t mc "say 正在宣读规则。。。" Enter
@@ -177,11 +189,11 @@ sleep 1
 tmux send-keys -t mc "say 【开始比赛中】正在设置中心点……" Enter
 tmux send-keys -t mc "worldborder center $centerX $centerZ" Enter
 sleep 0.1
-tmux send-keys -t mc "say 【开始比赛中】正在清除玩家的特殊效果……" Enter
+tmux send-keys -t mc "say 【开始比赛中】正在设置玩家最大血量……" Enter
 tmux send-keys -t mc "execute as @a at @a run attribute @s minecraft:generic.max_health base set 20" Enter
 sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在清空怪物……" Enter
-tmux send-keys -t mc "difficulty peachful" Enter
+tmux send-keys -t mc "difficulty peaceful" Enter
 sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在设置一个好天气……" Enter
 tmux send-keys -t mc "weather clear" Enter
@@ -203,6 +215,9 @@ tmux send-keys -t mc "worldborder set 3000" Enter
 sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在清空玩家物品……" Enter
 tmux send-keys -t mc "clear @a" Enter
+sleep 0.1
+tmux send-keys -t mc "say 【开始比赛中】正在清空玩家特效。。。" Enter
+tmux send-keys -t mc "effect clear @a" Enter
 sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在将玩家设置为生存模式……" Enter
 tmux send-keys -t mc "gamemode survival @a" Enter
