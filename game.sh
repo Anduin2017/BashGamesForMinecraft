@@ -34,6 +34,11 @@ sleep 1
 tmux send-keys -t mc "setworldspawn $center" Enter
 sleep 1
 
+tmux send-keys -t mc "say 正在重置玩家的复活点……" Enter
+sleep 1
+tmux send-keys -t mc "spawnpoint @a 1883 70 -3182" Enter # 提前修建好的生存模式大本营
+sleep 1
+
 tmux send-keys -t mc "say 正在重置复活范围为5000……" Enter
 sleep 1
 tmux send-keys -t mc "gamerule spawnRadius 5000" Enter
@@ -49,11 +54,17 @@ sleep 1
 tmux send-keys -t mc "gamemode survival @a" Enter
 sleep 1
 
+tmux send-keys -t mc "say 正在给玩家增加血量上限……" Enter
+sleep 1
+tmux send-keys -t mc "execute as @a at @a run attribute @s minecraft:generic.max_health base set 40" Enter
+sleep 1
+
 tmux send-keys -t mc "say 服务器已经成功设置为自由探索模式！" Enter
 
 centerX="3441"
 centerZ="-1183"
 centerY="65"
+
 # 提前确定中心点。不要告诉任何人。
 
 sleep 20
@@ -94,14 +105,10 @@ sleep 1
 tmux send-keys -t mc "say 初始化饥饿游戏……" Enter
 sleep 1
 
-tmux send-keys -t mc "say 正在清空玩家物品……" Enter
-sleep 2
-tmux send-keys -t mc "clear @a" Enter
-sleep 0.5
 
 tmux send-keys -t mc "say 正在调整时间……" Enter
 sleep 1
-tmux send-keys -t mc "time set 23000" Enter # 凌晨
+tmux send-keys -t mc "time set 2000" Enter # 凌晨
 sleep 1
 
 tmux send-keys -t mc "say 正在禁止玩家交互方块……" Enter
@@ -126,17 +133,21 @@ tmux send-keys -t mc "say 圆圈一共会缩小六次。由最开始的3000，�
 sleep 8
 tmux send-keys -t mc "say 如果玩家在游戏过程中死亡了，则可以复活到自己之前的存档床。如果玩家根本就没有制作床，那么将会复活到圈内随机位置。注意：每个玩家最多复活 3 次，第 4 次死亡就会淘汰。" Enter
 sleep 8
-tmux send-keys -t mc "say 最终没有被淘汰的 1 名玩家为胜者！获得丰厚奖励！（注意：你的游戏过程可能会被录制或直播！如果不同意，请立刻退出服务器！）" Enter
+tmux send-keys -t mc "say 如果玩家在游戏过程中前往了末地或地狱，则迟早需要在主世界的胜者产生之前返回主世界，否则不会计入胜利条件。" Enter
+sleep 8
+tmux send-keys -t mc "say 最终没有被淘汰的活着站在主世界的那一名玩家为胜者！获得丰厚奖励！" Enter
 sleep 8
 tmux send-keys -t mc "say 规则宣读完毕，祝大家好运。" Enter
 sleep 3
 
-
+tmux send-keys -t mc "tp @a 562 35 -1681" Enter # 提前修好一个放满床的严肃室。
+sleep 3
 tmux send-keys -t mc "say 请大家立刻在附近随意一张床上睡眠。" Enter
 sleep 5
 tmux send-keys -t mc "say 请大家立刻在床上睡眠一下！" Enter
 sleep 5
 tmux send-keys -t mc "say 最终确认：请大家立刻在床上睡眠一次！" Enter
+sleep 1
 tmux send-keys -t mc "give @a minecraft:cooked_beef 1024" Enter #给他们一些肉，让他们爽！
 sleep 2
 
@@ -166,8 +177,14 @@ sleep 1
 tmux send-keys -t mc "say 【开始比赛中】正在设置中心点……" Enter
 tmux send-keys -t mc "worldborder center $centerX $centerZ" Enter
 sleep 0.1
-tmux send-keys -t mc "say 【开始比赛中】正在设置怪物量……" Enter
-tmux send-keys -t mc "difficulty easy" Enter
+tmux send-keys -t mc "say 【开始比赛中】正在清除玩家的特殊效果……" Enter
+tmux send-keys -t mc "execute as @a at @a run attribute @s minecraft:generic.max_health base set 20" Enter
+sleep 0.1
+tmux send-keys -t mc "say 【开始比赛中】正在清空怪物……" Enter
+tmux send-keys -t mc "difficulty peachful" Enter
+sleep 0.1
+tmux send-keys -t mc "say 【开始比赛中】正在设置一个好天气……" Enter
+tmux send-keys -t mc "weather clear" Enter
 sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在设置时间……" Enter
 tmux send-keys -t mc "time set 23500" Enter
@@ -177,6 +194,9 @@ tmux send-keys -t mc "setworldspawn $centerX $ceterY $centerZ" Enter
 sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在设置比赛复活范围……" Enter
 tmux send-keys -t mc "gamerule spawnRadius 3000" Enter
+sleep 0.1
+tmux send-keys -t mc "say 【开始比赛中】正在设置玩家的等级为 0 级……" Enter
+tmux send-keys -t mc "experience set @a 0 levels" Enter
 sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在设置比赛世界宽度……" Enter
 tmux send-keys -t mc "worldborder set 3000" Enter
@@ -199,22 +219,20 @@ tmux send-keys -t mc "scoreboard objectives setdisplay sidebar dead_match" Enter
 tmux send-keys -t mc "scoreboard players set @a dead_match 0" Enter
 sleep 0.2
 tmux send-keys -t mc "say 正在赠送物品……" Enter
-tmux send-keys -t mc "give @a minecraft:water_bucket 1" Enter
-tmux send-keys -t mc "give @a minecraft:redstone 1" Enter
 tmux send-keys -t mc "give @a minecraft:blue_bed 1" Enter
 tmux send-keys -t mc "give @a minecraft:oak_planks 64" Enter
 tmux send-keys -t mc "give @a minecraft:stone 8" Enter
 tmux send-keys -t mc "give @a minecraft:arrow 8" Enter
-tmux send-keys -t mc "give @a minecraft:bone 16" Enter
+tmux send-keys -t mc "give @a minecraft:bone 1" Enter
 tmux send-keys -t mc "give @a minecraft:iron_ore 1" Enter
-tmux send-keys -t mc "give @a minecraft:beef 4" Enter
+tmux send-keys -t mc "give @a minecraft:rotten_flesh 6" Enter
 sleep 0.2
 
 tmux send-keys -t mc "say 比赛已经正式开始！！当前宽度：2000。" Enter
 sleep 2
 tmux send-keys -t mc "say 距离下次边界缩小还有5分钟。" Enter
 sleep 2
-tmux send-keys -t mc "say 【提示】此时是早晨，不会有太多怪物！尽快获得衣服、食物和工具是要务！搜刮村庄也可能是个好方法。你也可以先盖一个小屋来保护自己。" Enter
+tmux send-keys -t mc "say 【提示】此时是早晨，不会有怪物！尽快获得衣服、食物和工具是要务！搜刮村庄也可能是个好方法。你也可以先盖一个小屋来保护自己。" Enter
 sleep 50
 tmux send-keys -t mc "say 【提示】留意服务器的提示语！这包括游戏技巧、建议和重要的缩圈新闻！这些信息非常重要。根据提示，合理安排时间和精力去搭配运营和战斗是你取得胜利的关键" Enter
 sleep 50
@@ -241,12 +259,19 @@ tmux send-keys -t mc "say 【提示】在靠近世界的边界，也就是圈的
 sleep 150
 tmux send-keys -t mc "say 距离比赛开始已经过去15分钟。边界缩小结束！当前宽度：2000。" Enter
 sleep 2
-tmux send-keys -t mc "say 距离下次边界缩小还有5分钟。" Enter
+tmux send-keys -t mc "say 距离下次边界缩小还有5分钟。但是地图上将会出现怪物。" Enter
 sleep 2
+tmux send-keys -t mc "difficulty easy" Enter
+sleep 2
+sleep 25
 tmux send-keys -t mc "say 【提示】如果你制作了一个指南针，那么指南针将会始终指向世界的中心！这会给你带来巨大的导航优势！制作指南针只需要红石和铁即可！" Enter
-sleep 100
+sleep 25
+tmux send-keys -t mc "say 【提示】没用的物品要即时丢掉！一般来说，树种、鸡蛋、可可豆等用处都不大。不过，怪物掉落的物品往往都非常有用，例如线可以制作弓，羽毛可以制作箭，骨头可以驯服狼。" Enter
+sleep 50
 tmux send-keys -t mc "say 【提示】或许你想拥有一些高级装备。相比挖矿，直接去翻翻村庄里的箱子可能更实用。小心途径的怪物和玩家！时刻用床来保持自己的复活位置！" Enter
-sleep 100
+sleep 50
+tmux send-keys -t mc "say 【提示】如果圈缩完了以后，你的床在圈外，那么床的功能将会消失！你仍然会复活在随机位置！请始终确保你有一个圈内的床在附近！" Enter
+sleep 50
 tmux send-keys -t mc "say 【提示】完成一些游戏内的成就会获得一些奖励物品，例如钻石、绿宝石。这一点对于刚刚进入服务器的玩家来说可以得到优势。" Enter
 sleep 90
 
@@ -258,16 +283,16 @@ tmux send-keys -t mc "worldborder add -800 180" Enter
 sleep 45
 tmux send-keys -t mc "say 【提示】圈的缩小速度和你的跑步速度差不多。但是划船就能远远超过这个速度。走水路可以躲开毒圈，但是要小心溺尸！" Enter
 sleep 45
-tmux send-keys -t mc "say 【提示】在白天的时间专注于探索野外和赶路。在晚上的时间专注于保护自己、探索村庄、划船、杀死一些怪物获得装备、划船，都是不错的安排。" Enter
+tmux send-keys -t mc "say 【提示】很快晚上就会出现怪物。在白天的时间专注于探索野外和赶路。在晚上的时间专注于保护自己、探索村庄、划船，都是不错的安排。" Enter
 sleep 45
-tmux send-keys -t mc "say 【提示】在从高处落下的同时，将水桶里的水洒在地面上可以避免落地造成的伤害。高端玩家往往都知道这个技巧来让自己赶路更流畅。" Enter
+tmux send-keys -t mc "say 【提示】制作一个水桶！在从高处落下的同时，将水桶里的水洒在地面上可以避免伤害。高端玩家往往都知道这个技巧来让自己赶路更流畅。" Enter
 sleep 45
 tmux send-keys -t mc "say 距离比赛开始已经过去23分钟。边界缩小结束！当前宽度：1200。" Enter
 sleep 2
 tmux send-keys -t mc "say 距离下次边界缩小还有5分钟。" Enter
 sleep 2
-tmux send-keys -t mc "say 正在赠送物品……" Enter
-tmux send-keys -t mc "give @a minecraft:water_bucket 1" Enter
+tmux send-keys -t mc "say 正在赠送物品……红石、泥土、木板、石头、箭、骨头、铁、牛肉" Enter
+tmux send-keys -t mc "give @a minecraft:redstone 1" Enter
 tmux send-keys -t mc "give @a minecraft:dirt 32" Enter
 tmux send-keys -t mc "give @a minecraft:oak_planks 16" Enter
 tmux send-keys -t mc "give @a minecraft:stone 8" Enter
@@ -277,9 +302,10 @@ tmux send-keys -t mc "give @a minecraft:iron_ore 4" Enter
 tmux send-keys -t mc "give @a minecraft:beef 4" Enter
 sleep 100
 tmux send-keys -t mc "say 【提示】按住Tab键可以查看玩家的等级。这往往意味着他们发展的情况。小心那些高等级的玩家！他们不但装备丰富，游戏经验也往往更多。" Enter
-sleep 100
-tmux send-keys -t mc "say 【提示】杀死蜘蛛可以制作弓。当然你也可以去击杀骷髅来试图抢到一把弓。这是在劣势翻盘的最大可能。" Enter
-sleep 90
+sleep 145
+tmux send-keys -t mc "say 【提示】杀死蜘蛛可以制作弓。当然你也可以去击杀骷髅来试图抢到一把弓。" Enter
+sleep 0.1
+sleep 45
 
 
 tmux send-keys -t mc "say 目前世界宽度：1200。10秒后开始缩小边界。" Enter
@@ -311,7 +337,7 @@ tmux send-keys -t mc "say 距离下次边界缩小还有5分钟。" Enter
 sleep 100
 tmux send-keys -t mc "say 【提示】生存游戏的核心宗旨是活下去而不是杀人。杀死别的玩家可以抢走他们的物资，但自己也容易死。死亡三次就会出局！" Enter
 sleep 100
-tmux send-keys -t mc "say 【提示】你可以用得到的骨头喂狼。狼会帮助你战斗，虽然他们很容易被苦力怕消灭，但是在关键战斗中会非常有用！" Enter
+tmux send-keys -t mc "say 【提示】试图给其它玩家发送一些友善的表情和物资来和他们结盟？不过，小心，胜利者只有一个，玩家之间往往会充满尔虞我诈。他可能是骗你失去警觉：所谓的友好盟友都随时可能倒戈相向！" Enter
 sleep 90
 
 tmux send-keys -t mc "say 目前世界宽度：400。10秒后开始缩小边界。" Enter
@@ -322,10 +348,12 @@ sleep 120
 tmux send-keys -t mc "say 距离比赛开始已经过去45分钟。边界缩小结束！当前宽度：100。" Enter
 sleep 2
 tmux send-keys -t mc "say 距离下次边界缩小还有5分钟。" Enter
-sleep 100
+sleep 50
+tmux send-keys -t mc "say 【提示】游戏过程中，一共会赠送3次物品。这些物品往往能够让劣势的玩家重新获得翻盘的机会。但小心！它们可能会撑爆你的背包！提前清理出至少8个空位，扔掉没用的物品！" Enter
+sleep 50
 tmux send-keys -t mc "say 【提示】击杀苦力怕，获得火药，或许可以制作一些TNT，用来在游戏末期在圈中心制作陷阱来炸死其余的玩家。" Enter
 sleep 100
-tmux send-keys -t mc "say 【提示】按照游戏规则，如果有玩家去了地狱或是末地，那么所有没去玩家迟早都会被圈毒死！所以，去地狱也是劣势最后的翻盘希望。" Enter
+tmux send-keys -t mc "say 【提示】按照游戏规则，如果有玩家去了地狱或是末地，则他们必须返回主世界，冠军只会在主世界产生！" Enter
 sleep 90
 
 tmux send-keys -t mc "say 目前世界宽度：100。10秒后开始缩小边界。" Enter
@@ -335,14 +363,29 @@ tmux send-keys -t mc "worldborder add -80 15" Enter
 sleep 15
 tmux send-keys -t mc "say 距离比赛开始已经过去50分钟。边界缩小结束！当前宽度：20。" Enter
 sleep 2
-tmux send-keys -t mc "say 边界不会继续缩小。所有玩家必须决出胜负。" Enter
+tmux send-keys -t mc "say 所有玩家必须决出胜负！" Enter
 sleep 2
 tmux send-keys -t mc "say 正在赠送物品……" Enter
 tmux send-keys -t mc "give @a minecraft:oak_planks 64" Enter
-tmux send-keys -t mc "give @a minecraft:stone 16" Enter
-tmux send-keys -t mc "give @a minecraft:arrow 16" Enter
+tmux send-keys -t mc "give @a minecraft:cobblestone 64" Enter
+tmux send-keys -t mc "give @a minecraft:stone_sword 1" Enter
+tmux send-keys -t mc "give @a minecraft:lava_buket 1" Enter
+tmux send-keys -t mc "give @a minecraft:bow 1" Enter
+tmux send-keys -t mc "give @a minecraft:arrow 3" Enter
 tmux send-keys -t mc "give @a minecraft:iron_ore 16" Enter
-tmux send-keys -t mc "give @a minecraft:beef 16" Enter
+tmux send-keys -t mc "give @a minecraft:cooked_beef 16" Enter
+tmux send-keys -t mc "say 【提示】实在不知道如何取胜？别忘了，这是一款开源的游戏。切出来开个网页阅读它的源码可以让你找到线索来翻盘哦： https://git.aiursoft.cn/Anduin" Enter
+tmux send-keys -t mc "difficulty hard" Enter
+sleep 100
+
+tmux send-keys -t mc "say 正在赠送物品……" Enter
+tmux send-keys -t mc "give @a minecraft:obsidian 12" Enter
+tmux send-keys -t mc "give @a minecraft:bow 1" Enter
+tmux send-keys -t mc "give @a minecraft:arrow 3" Enter
+tmux send-keys -t mc "give @a minecraft:iron_ore 16" Enter
+tmux send-keys -t mc "give @a minecraft:cooked_beef 16" Enter
+tmux send-keys -t mc "give @a minecraft:flint_and_steel 1" Enter
+tmux send-keys -t mc "worldborder add -12 300" Enter
 exit
 
 # 脚本在这里退出了。不会再执行任何操作
