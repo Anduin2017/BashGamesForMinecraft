@@ -7,9 +7,9 @@
 tmux send-keys -t mc "say 服务器正在重置世界配置为自由模式……" Enter
 sleep 1
 
-tmux send-keys -t mc "say 正在重置世界宽度为7000……" Enter
+tmux send-keys -t mc "say 正在重置世界宽度为14000……" Enter
 sleep 1
-tmux send-keys -t mc "worldborder set 7000" Enter
+tmux send-keys -t mc "worldborder set 14000" Enter
 sleep 1
 
 tmux send-keys -t mc "say 正在重置中心点……" Enter
@@ -44,10 +44,10 @@ sleep 1
 tmux send-keys -t mc "gamerule spawnRadius 5000" Enter
 sleep 1
 
-tmux send-keys -t mc "say 正在将玩家转移到大本营……" Enter
-sleep 1
-tmux send-keys -t mc "tp @a 1883 70 -3182" Enter # 提前修建好的生存模式大本营
-sleep 1
+#tmux send-keys -t mc "say 正在将玩家转移到大本营……" Enter
+#sleep 1
+#tmux send-keys -t mc "tp @a 1883 70 -3182" Enter # 提前修建好的生存模式大本营
+#sleep 1
 
 tmux send-keys -t mc "say 正在将所有玩家的游戏模式设为生存模式……" Enter
 sleep 1
@@ -59,18 +59,26 @@ sleep 1
 tmux send-keys -t mc "execute as @a at @a run attribute @s minecraft:generic.max_health base set 40" Enter
 sleep 1
 
+tmux send-keys -t mc "say 正在重新允许玩家睡觉……" Enter
+sleep 1
+tmux send-keys -t mc "gamerule playersSleepingPercentage 100" Enter
+sleep 1
+
 tmux send-keys -t mc "say 正在开启Web地图功能……" Enter
 sudo ufw allow 8123
 
 tmux send-keys -t mc "say 服务器已经成功设置为自由探索模式！" Enter
 
-centerX="3060"
-centerZ="-1097"
-centerY="65"
+centerX="4212"
+centerZ="-6183"
+centerY="200"
 
 # 提前确定中心点。不要告诉任何人。
-
 sleep 20
+tmux send-keys -t mc "say 服务器将在5分钟后开始进行饥饿游戏比赛！请脱下所有装备！" Enter
+sleep 60
+tmux send-keys -t mc "say 服务器将在4分钟后开始进行饥饿游戏比赛！请脱下所有装备！" Enter
+sleep 60
 tmux send-keys -t mc "say 服务器将在3分钟后开始进行饥饿游戏比赛！请脱下所有装备！" Enter
 sleep 60
 tmux send-keys -t mc "say 服务器将在2分钟后开始进行饥饿游戏比赛！请脱下所有装备！" Enter
@@ -206,6 +214,9 @@ tmux send-keys -t mc "setworldspawn $centerX $ceterY $centerZ" Enter
 sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在设置比赛复活范围……" Enter
 tmux send-keys -t mc "gamerule spawnRadius 3000" Enter
+sleep 0.1
+tmux send-keys -t mc "say 【开始比赛中】正在禁止玩家睡觉……" Enter
+tmux send-keys -t mc "gamerule playersSleepingPercentage 101" Enter
 sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在设置玩家的等级为 0 级……" Enter
 tmux send-keys -t mc "experience set @a 0 levels" Enter
