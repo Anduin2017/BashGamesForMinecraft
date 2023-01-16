@@ -69,16 +69,13 @@ sudo ufw allow 8123
 
 tmux send-keys -t mc "say 服务器已经成功设置为自由探索模式！" Enter
 
-centerX="4212"
-centerZ="-6183"
+centerX="-3494"
+centerZ="-885"
 centerY="200"
 
 # 提前确定中心点。不要告诉任何人。
 sleep 20
-tmux send-keys -t mc "say 服务器将在5分钟后开始进行饥饿游戏比赛！请脱下所有装备！" Enter
-sleep 60
-tmux send-keys -t mc "say 服务器将在4分钟后开始进行饥饿游戏比赛！请脱下所有装备！" Enter
-sleep 60
+
 tmux send-keys -t mc "say 服务器将在3分钟后开始进行饥饿游戏比赛！请脱下所有装备！" Enter
 sleep 60
 tmux send-keys -t mc "say 服务器将在2分钟后开始进行饥饿游戏比赛！请脱下所有装备！" Enter
@@ -246,6 +243,7 @@ tmux send-keys -t mc "scoreboard players set @a dead_match 0" Enter
 sleep 0.2
 tmux send-keys -t mc "say 正在赠送物品……" Enter
 tmux send-keys -t mc "give @a minecraft:blue_bed 1" Enter
+tmux send-keys -t mc "give @a minecraft:crossbow 1" Enter
 tmux send-keys -t mc "give @a minecraft:oak_planks 64" Enter
 tmux send-keys -t mc "give @a minecraft:stone 8" Enter
 tmux send-keys -t mc "give @a minecraft:arrow 8" Enter
@@ -396,10 +394,10 @@ tmux send-keys -t mc "give @a minecraft:oak_planks 64" Enter
 tmux send-keys -t mc "give @a minecraft:cobblestone 64" Enter
 tmux send-keys -t mc "give @a minecraft:stone_sword 1" Enter
 tmux send-keys -t mc "give @a minecraft:lava_buket 1" Enter
-tmux send-keys -t mc "give @a minecraft:bow 1" Enter
 tmux send-keys -t mc "give @a minecraft:arrow 3" Enter
 tmux send-keys -t mc "give @a minecraft:iron_ore 16" Enter
 tmux send-keys -t mc "give @a minecraft:cooked_beef 16" Enter
+tmux send-keys -t mc "give @a minecraft:crossbow 1" Enter
 tmux send-keys -t mc "say 【提示】实在不知道如何取胜？别忘了，这是一款开源的游戏。切出来开个网页阅读它的源码可以让你找到线索来翻盘哦： https://git.aiursoft.cn/Anduin" Enter
 tmux send-keys -t mc "difficulty hard" Enter
 sleep 100
