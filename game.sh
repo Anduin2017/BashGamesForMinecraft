@@ -57,11 +57,32 @@ sleep 1
 tmux send-keys -t mc "say 正在给玩家增加血量上限……" Enter
 sleep 1
 tmux send-keys -t mc "execute as @a at @a run attribute @s minecraft:generic.max_health base set 40" Enter
+tmux send-keys -t mc "effect clear @a" Enter
+tmux send-keys -t mc "effect give @a minecraft:speed 300 3" Enter
+tmux send-keys -t mc "effect give @a minecraft:haste 300 3" Enter
+tmux send-keys -t mc "effect give @a minecraft:strength 300" Enter
+tmux send-keys -t mc "effect give @a minecraft:instant_health 300" Enter
+tmux send-keys -t mc "effect give @a minecraft:jump_boost 300 3" Enter
+tmux send-keys -t mc "effect give @a minecraft:regeneration 300" Enter
+tmux send-keys -t mc "effect give @a minecraft:resistance 300" Enter
+tmux send-keys -t mc "effect give @a minecraft:fire_resistance 300" Enter
+tmux send-keys -t mc "effect give @a minecraft:water_breathing 300" Enter
+tmux send-keys -t mc "effect give @a minecraft:night_vision 300" Enter
+tmux send-keys -t mc "effect give @a minecraft:health_boost 300" Enter
+tmux send-keys -t mc "effect give @a minecraft:absorption 300" Enter
+tmux send-keys -t mc "effect give @a minecraft:saturation 300" Enter
+tmux send-keys -t mc "effect give @a minecraft:glowing 300" Enter
+tmux send-keys -t mc "effect give @a minecraft:luck 300" Enter
+tmux send-keys -t mc "effect give @a minecraft:slow_falling 300" Enter
+tmux send-keys -t mc "effect give @a minecraft:conduit_power 300 3" Enter
+tmux send-keys -t mc "effect give @a minecraft:dolphins_grace 300 3" Enter
+tmux send-keys -t mc "effect give @a minecraft:hero_of_the_village 300" Enter
 sleep 1
 
 tmux send-keys -t mc "say 正在重新允许玩家睡觉……" Enter
 sleep 1
 tmux send-keys -t mc "gamerule playersSleepingPercentage 100" Enter
+tmux send-keys -t mc "gamerule doDaylightCycle true" Enter
 sleep 1
 
 tmux send-keys -t mc "say 正在开启Web地图功能……" Enter
