@@ -5,8 +5,8 @@
 # 缩圈中心点
 ./reset.sh
 
-centerX="-3494"
-centerZ="-885"
+centerX="-3592"
+centerZ="-6358"
 centerY="200"
 
 # 提前确定中心点。不要告诉任何人。
