@@ -126,9 +126,6 @@ sleep 1
 tmux send-keys -t mc "say 【开始比赛中】正在设置中心点……" Enter
 tmux send-keys -t mc "worldborder center $centerX $centerZ" Enter
 sleep 0.1
-tmux send-keys -t mc "say 【开始比赛中】正在设置玩家最大血量……" Enter
-tmux send-keys -t mc "execute as @a at @a run attribute @s minecraft:generic.max_health base set 8" Enter
-sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在放置怪物……" Enter
 tmux send-keys -t mc "difficulty easy" Enter
 sleep 0.1
@@ -160,7 +157,7 @@ tmux send-keys -t mc "say 【开始比赛中】正在将玩家设置为生存模
 tmux send-keys -t mc "gamemode survival @a" Enter
 sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在散布玩家……" Enter
-tmux send-keys -t mc "spreadplayers $centerX $centerZ 300 50 false @a" Enter
+tmux send-keys -t mc "spreadplayers $centerX $centerZ 20 150 false @a" Enter
 sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在设置死亡保持装备……" Enter
 tmux send-keys -t mc "gamerule keepInventory false" Enter
@@ -173,6 +170,9 @@ tmux send-keys -t mc "scoreboard objectives add playerKillCount playerKillCount 
 tmux send-keys -t mc "scoreboard objectives setdisplay sidebar playerKillCount" Enter
 tmux send-keys -t mc "scoreboard players set @a playerKillCount 0" Enter
 sleep 0.2
+tmux send-keys -t mc "say 【开始比赛中】正在设置玩家最大血量……" Enter
+tmux send-keys -t mc "execute as @a at @a run attribute @s minecraft:generic.max_health base set 8" Enter
+sleep 0.1
 
 
 tmux send-keys -t mc "say 比赛已经正式开始！！" Enter
