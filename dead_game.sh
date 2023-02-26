@@ -160,7 +160,7 @@ tmux send-keys -t mc "say 【开始比赛中】正在散布玩家……" Enter
 tmux send-keys -t mc "spreadplayers $centerX $centerZ 20 150 false @a" Enter
 sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在设置死亡保持装备……" Enter
-tmux send-keys -t mc "gamerule keepInventory false" Enter
+tmux send-keys -t mc "gamerule keepInventory true" Enter
 sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在重置记分牌……" Enter
 tmux send-keys -t mc "scoreboard objectives setdisplay list level" Enter
