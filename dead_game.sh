@@ -178,7 +178,24 @@ sleep 0.2
 tmux send-keys -t mc "say 比赛已经正式开始！！" Enter
 sleep 3
 tmux send-keys -t mc "say 比赛时长：10分钟！杀敌最多获胜！" Enter
-
+sleep 300
+tmux send-keys -t mc "say 比赛剩余时长：5分钟！" Enter
+sleep 60
+tmux send-keys -t mc "say 比赛剩余时长：4分钟！" Enter
+sleep 60
+tmux send-keys -t mc "say 比赛剩余时长：3分钟！" Enter
+sleep 60
+tmux send-keys -t mc "say 比赛剩余时长：2分钟！" Enter
+sleep 60
+tmux send-keys -t mc "say 比赛剩余时长：1分钟！" Enter
+sleep 30
+tmux send-keys -t mc "say 比赛剩余时长：30秒！" Enter
+sleep 10
+tmux send-keys -t mc "say 比赛剩余时长：20秒！" Enter
+sleep 10
+tmux send-keys -t mc "say 比赛剩余时长：10秒！" Enter
+sleep 10
+tmux send-keys -t mc "say 比赛结束！" Enter
 # 脚本在这里退出了。不会再执行任何操作
 # 让所有玩家决出胜负！
 # 然后重新运行脚本的开头，即可把玩家都弄回家。
