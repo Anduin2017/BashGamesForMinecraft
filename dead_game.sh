@@ -162,17 +162,22 @@ sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在散布玩家……" Enter
 tmux send-keys -t mc "spreadplayers $centerX $centerZ 300 50 false @a" Enter
 sleep 0.1
+tmux send-keys -t mc "say 【开始比赛中】正在设置死亡保持装备……" Enter
+tmux send-keys -t mc "gamerule keepInventory false" Enter
+sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在重置记分牌……" Enter
 tmux send-keys -t mc "scoreboard objectives setdisplay list level" Enter
 tmux send-keys -t mc "scoreboard objectives setdisplay belowName bac_health" Enter
-tmux send-keys -t mc "scoreboard objectives remove dead_match " Enter
-tmux send-keys -t mc "scoreboard objectives add dead_match deathCount \"杀敌人数（最多获胜）\"" Enter
-tmux send-keys -t mc "scoreboard objectives setdisplay sidebar dead_match" Enter
-tmux send-keys -t mc "scoreboard players set @a dead_match 0" Enter
+tmux send-keys -t mc "scoreboard objectives remove playerKillCount " Enter
+tmux send-keys -t mc "scoreboard objectives add playerKillCount playerKillCount \"杀敌人数（最多获胜）\"" Enter
+tmux send-keys -t mc "scoreboard objectives setdisplay sidebar playerKillCount" Enter
+tmux send-keys -t mc "scoreboard players set @a playerKillCount 0" Enter
 sleep 0.2
 
 
 tmux send-keys -t mc "say 比赛已经正式开始！！" Enter
+sleep 3
+tmux send-keys -t mc "say 比赛时长：10分钟！杀敌最多获胜！" Enter
 
 # 脚本在这里退出了。不会再执行任何操作
 # 让所有玩家决出胜负！

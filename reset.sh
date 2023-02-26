@@ -49,6 +49,11 @@ sleep 1
 tmux send-keys -t mc "gamemode survival @a" Enter
 sleep 1
 
+tmux send-keys -t mc "say 正在设置死亡惩罚丢失物品……" Enter
+sleep 1
+tmux send-keys -t mc "gamerule keepInventory false" Enter
+sleep 1
+
 tmux send-keys -t mc "say 正在给玩家增加血量上限……" Enter
 sleep 1
 tmux send-keys -t mc "execute as @a at @a run attribute @s minecraft:generic.max_health base set 40" Enter
