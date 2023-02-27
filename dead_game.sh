@@ -84,7 +84,17 @@ tmux send-keys -t mc "say 请大家立刻在附近随意一张床上睡眠。" E
 sleep 5
 tmux send-keys -t mc "say 最终确认：请大家立刻在床上睡眠一次！" Enter
 sleep 1
-tmux send-keys -t mc "give @a minecraft:cooked_beef 5" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:cooked_beef 64" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:netherite_axe" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:netherite_boots" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:netherite_chestplate" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:netherite_helmet" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:netherite_legging" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:bow" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:arrow 128" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:golden_apple 3" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:totem_of_undying 3" Enter #给他们一些肉，让他们爽！
+/give AnduinXue  3
 sleep 2
 
 tmux send-keys -t mc "say 在7秒后比赛正式开始！" Enter
@@ -108,11 +118,11 @@ sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在放置怪物……" Enter
 tmux send-keys -t mc "difficulty easy" Enter
 sleep 0.1
-tmux send-keys -t mc "say 【开始比赛中】正在设置一个坏天气……" Enter
-tmux send-keys -t mc "weather thunder" Enter
+tmux send-keys -t mc "say 【开始比赛中】正在设置一个好天气……" Enter
+tmux send-keys -t mc "weather clear" Enter
 sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在设置时间……" Enter
-tmux send-keys -t mc "time set 23500" Enter
+tmux send-keys -t mc "time set 0" Enter
 sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在重置复活点……" Enter
 tmux send-keys -t mc "setworldspawn $centerX $ceterY $centerZ" Enter
@@ -175,7 +185,10 @@ tmux send-keys -t mc "say 比赛剩余时长：20秒！" Enter
 sleep 10
 tmux send-keys -t mc "say 比赛剩余时长：10秒！" Enter
 sleep 10
-tmux send-keys -t mc "say 比赛结束！" Enter
+tmux send-keys -t mc "say 比赛结束！!!!!!" Enter
+sleep 3
+tmux send-keys -t mc "say 比赛结束！!!!!!!!!!!!" Enter
+sleep 3
 # 脚本在这里退出了。不会再执行任何操作
 # 让所有玩家决出胜负！
 # 然后重新运行脚本的开头，即可把玩家都弄回家。
