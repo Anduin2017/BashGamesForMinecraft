@@ -89,11 +89,16 @@ tmux send-keys -t mc "give @a minecraft:netherite_axe" Enter #给他们一些肉
 tmux send-keys -t mc "give @a minecraft:netherite_boots" Enter #给他们一些肉，让他们爽！
 tmux send-keys -t mc "give @a minecraft:netherite_chestplate" Enter #给他们一些肉，让他们爽！
 tmux send-keys -t mc "give @a minecraft:netherite_helmet" Enter #给他们一些肉，让他们爽！
-tmux send-keys -t mc "give @a minecraft:netherite_legging" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:netherite_leggings" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:minecraft:black_bed" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:minecraft:ender_pearl 6" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:minecraft:chorus_fruit 8" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:minecraft:crossbow 1" Enter #给他们一些肉，让他们爽！
+
 tmux send-keys -t mc "give @a minecraft:bow" Enter #给他们一些肉，让他们爽！
 tmux send-keys -t mc "give @a minecraft:arrow 128" Enter #给他们一些肉，让他们爽！
 tmux send-keys -t mc "give @a minecraft:golden_apple 3" Enter #给他们一些肉，让他们爽！
-tmux send-keys -t mc "give @a minecraft:totem_of_undying 3" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:totem_of_undying 2" Enter #给他们一些肉，让他们爽！
 /give AnduinXue  3
 sleep 2
 
