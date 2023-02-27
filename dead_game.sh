@@ -96,9 +96,18 @@ tmux send-keys -t mc "give @a minecraft:ender_pearl 6" Enter #给他们一些肉
 tmux send-keys -t mc "give @a minecraft:chorus_fruit 8" Enter #给他们一些肉，让他们爽！
 tmux send-keys -t mc "give @a minecraft:crossbow 1" Enter #给他们一些肉，让他们爽！
 tmux send-keys -t mc "give @a minecraft:bow" Enter #给他们一些肉，让他们爽！
-tmux send-keys -t mc "give @a minecraft:arrow 128" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:cake" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:arrow 32" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:spectral_arrow 64" Enter #给他们一些肉，让他们爽！
 tmux send-keys -t mc "give @a minecraft:golden_apple 3" Enter #给他们一些肉，让他们爽！
 tmux send-keys -t mc "give @a minecraft:totem_of_undying 2" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:lava_bucket 2" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:water_bucket 1" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:tnt 5" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:flint_and_steel 1" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:shield 1" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:spyglass 1" Enter #给他们一些肉，让他们爽！
+
 /give AnduinXue  3
 sleep 2
 
@@ -175,6 +184,7 @@ tmux send-keys -t mc "say 比赛时长：10分钟！杀敌最多获胜！" Enter
 tmux send-keys -t mc "worldborder add -120 550" Enter
 sleep 300
 tmux send-keys -t mc "say 比赛剩余时长：5分钟！" Enter
+tmux send-keys -t mc "weather clear" Enter
 sleep 60
 tmux send-keys -t mc "say 比赛剩余时长：4分钟！" Enter
 sleep 60
@@ -183,6 +193,7 @@ sleep 60
 tmux send-keys -t mc "say 比赛剩余时长：2分钟！" Enter
 sleep 60
 tmux send-keys -t mc "say 比赛剩余时长：1分钟！" Enter
+tmux send-keys -t mc "weather clear" Enter
 sleep 30
 tmux send-keys -t mc "say 比赛剩余时长：30秒！" Enter
 sleep 10

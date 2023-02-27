@@ -2,6 +2,11 @@
 tmux send-keys -t mc "say 服务器正在重置世界配置为自由模式……" Enter
 sleep 1
 
+tmux send-keys -t mc "say 正在给玩家增加血量……" Enter
+sleep 1
+tmux send-keys -t mc "execute as @a at @a run attribute @s minecraft:generic.max_health base set 40" Enter
+sleep 1
+
 tmux send-keys -t mc "say 正在重置世界宽度为14000……" Enter
 sleep 1
 tmux send-keys -t mc "worldborder set 14000" Enter
@@ -56,13 +61,12 @@ sleep 1
 
 tmux send-keys -t mc "say 正在给玩家增加血量上限……" Enter
 sleep 1
-tmux send-keys -t mc "execute as @a at @a run attribute @s minecraft:generic.max_health base set 40" Enter
 tmux send-keys -t mc "effect clear @a" Enter
 tmux send-keys -t mc "effect give @a minecraft:speed 200 1" Enter
 tmux send-keys -t mc "effect give @a minecraft:haste 300 1" Enter
 tmux send-keys -t mc "effect give @a minecraft:strength 3600" Enter
 tmux send-keys -t mc "effect give @a minecraft:instant_health 3600" Enter
-tmux send-keys -t mc "effect give @a minecraft:jump_boost 100 20" Enter
+tmux send-keys -t mc "effect give @a minecraft:jump_boost 100 5" Enter
 tmux send-keys -t mc "effect give @a minecraft:regeneration 700" Enter
 tmux send-keys -t mc "effect give @a minecraft:resistance 3000" Enter
 tmux send-keys -t mc "effect give @a minecraft:fire_resistance 3000" Enter
