@@ -5,8 +5,8 @@
 # 缩圈中心点
 ./reset.sh
 
-centerX="-3592"
-centerZ="-6358"
+centerX="-3730"
+centerZ="-6381"
 centerY="200"
 
 tmux send-keys -t mc "say 服务器将在20秒后开始进行死斗游戏比赛！" Enter
@@ -90,11 +90,11 @@ tmux send-keys -t mc "give @a minecraft:netherite_boots" Enter #给他们一些�
 tmux send-keys -t mc "give @a minecraft:netherite_chestplate" Enter #给他们一些肉，让他们爽！
 tmux send-keys -t mc "give @a minecraft:netherite_helmet" Enter #给他们一些肉，让他们爽！
 tmux send-keys -t mc "give @a minecraft:netherite_leggings" Enter #给他们一些肉，让他们爽！
-tmux send-keys -t mc "give @a minecraft:minecraft:black_bed" Enter #给他们一些肉，让他们爽！
-tmux send-keys -t mc "give @a minecraft:minecraft:ender_pearl 6" Enter #给他们一些肉，让他们爽！
-tmux send-keys -t mc "give @a minecraft:minecraft:chorus_fruit 8" Enter #给他们一些肉，让他们爽！
-tmux send-keys -t mc "give @a minecraft:minecraft:crossbow 1" Enter #给他们一些肉，让他们爽！
-
+tmux send-keys -t mc "give @a minecraft:dirt 128" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:black_bed" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:ender_pearl 6" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:chorus_fruit 8" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:crossbow 1" Enter #给他们一些肉，让他们爽！
 tmux send-keys -t mc "give @a minecraft:bow" Enter #给他们一些肉，让他们爽！
 tmux send-keys -t mc "give @a minecraft:arrow 128" Enter #给他们一些肉，让他们爽！
 tmux send-keys -t mc "give @a minecraft:golden_apple 3" Enter #给他们一些肉，让他们爽！
