@@ -108,7 +108,6 @@ tmux send-keys -t mc "give @a minecraft:flint_and_steel 1" Enter #给他们一�
 tmux send-keys -t mc "give @a minecraft:shield 1" Enter #给他们一些肉，让他们爽！
 tmux send-keys -t mc "give @a minecraft:spyglass 1" Enter #给他们一些肉，让他们爽！
 
-/give AnduinXue  3
 sleep 2
 
 tmux send-keys -t mc "say 在7秒后比赛正式开始！" Enter
