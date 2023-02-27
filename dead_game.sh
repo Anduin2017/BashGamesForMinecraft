@@ -107,6 +107,7 @@ tmux send-keys -t mc "give @a minecraft:tnt 5" Enter #给他们一些肉，让�
 tmux send-keys -t mc "give @a minecraft:flint_and_steel 1" Enter #给他们一些肉，让他们爽！
 tmux send-keys -t mc "give @a minecraft:shield 1" Enter #给他们一些肉，让他们爽！
 tmux send-keys -t mc "give @a minecraft:spyglass 1" Enter #给他们一些肉，让他们爽！
+tmux send-keys -t mc "give @a minecraft:cobweb 8" Enter #给他们一些肉，让他们爽！
 
 sleep 2
 
