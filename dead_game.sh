@@ -205,6 +205,7 @@ sleep 10
 tmux send-keys -t mc "say 比赛结束！!!!!!" Enter
 sleep 3
 tmux send-keys -t mc "say 比赛结束！!!!!!!!!!!!" Enter
+tmux send-keys -t mc "effect give @a minecraft:weekness 100 100" Enter
 sleep 3
 # 脚本在这里退出了。不会再执行任何操作
 # 让所有玩家决出胜负！
