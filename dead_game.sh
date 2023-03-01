@@ -174,7 +174,7 @@ tmux send-keys -t mc "scoreboard objectives setdisplay sidebar playerKillCount" 
 tmux send-keys -t mc "scoreboard players set @a playerKillCount 0" Enter
 sleep 0.2
 tmux send-keys -t mc "say 【开始比赛中】正在设置玩家最大血量……" Enter
-tmux send-keys -t mc "execute as @a at @a run attribute @s minecraft:generic.max_health base set 8" Enter
+tmux send-keys -t mc "execute as @a run attribute @s minecraft:generic.max_health base set 8" Enter
 tmux send-keys -t mc "effect give @a minecraft:glowing 5 5" Enter
 sleep 0.1
 
