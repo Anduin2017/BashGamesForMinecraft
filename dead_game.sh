@@ -62,56 +62,54 @@ sleep 0.2
 tmux send-keys -t mc "say 正在宣读规则。。。" Enter
 sleep 2
 tmux send-keys -t mc "say 革命胜利，恐怖的施惠国已经被推翻，饥饿游戏被彻底结束了！" Enter
-sleep 5
+sleep 4
 tmux send-keys -t mc "say 每个区再也不需要每年在电视直播的《死斗游戏》中竞争，战斗至死了。" Enter
-sleep 5
+sleep 4
 tmux send-keys -t mc "say 为了纪念这场伟大的胜利，新施惠国决定用一个新的活动来庆祝革命成功：死斗游戏" Enter
-sleep 6
-tmux send-keys -t mc "say 游戏开局，玩家可以自由携带自己的东西，然后就会被散布在一个宽度150的正方形空间中，开始不停的战斗。" Enter
-sleep 6
+sleep 5
+tmux send-keys -t mc "say 游戏开局，玩家可以自由携带自己的东西，然后就会被散布在一个宽度200的正方形空间中，开始不停的战斗。" Enter
+sleep 5
 tmux send-keys -t mc "say 如果玩家在游戏过程中死亡了，则可以立即复活，没有惩罚。当然，完全也可以去前往地狱、末地。" Enter
-sleep 6
+sleep 5
 tmux send-keys -t mc "say 在游戏结束时，杀敌人数最多的玩家可以获得胜利。" Enter
-sleep 6
+sleep 5
 tmux send-keys -t mc "say 游戏累计耗时只有10分钟！时间到后立刻结束！" Enter
-sleep 6
+sleep 5
 tmux send-keys -t mc "say 规则宣读完毕，祝大家好运。" Enter
 sleep 3
 
-tmux send-keys -t mc "tp @a 562 35 -1681" Enter # 提前修好一个放满床的严肃室。
-sleep 3
+tmux send-keys -t mc "tp @a 557 35 -1680" Enter # 提前修好一个放满床的严肃室。
+sleep 1
 tmux send-keys -t mc "say 请大家立刻在附近随意一张床上睡眠。" Enter
 sleep 5
-tmux send-keys -t mc "say 最终确认：请大家立刻在床上睡眠一次！" Enter
-sleep 1
 tmux send-keys -t mc "give @a minecraft:cooked_beef 64" Enter #给他们一些肉，让他们可以回血！
 tmux send-keys -t mc "give @a minecraft:netherite_axe" Enter #给他们一些斧子，让他们砍人用！
+tmux send-keys -t mc "give @a minecraft:netherite_sword" Enter #给他们一些斧子，让他们砍人用！
 tmux send-keys -t mc "give @a minecraft:netherite_boots" Enter #给他们一些牛逼的鞋，让他们穿着爽！
 tmux send-keys -t mc "give @a minecraft:netherite_chestplate" Enter #给他们一些牛逼的甲，让他们穿着爽！
 tmux send-keys -t mc "give @a minecraft:netherite_helmet" Enter #给他们一些牛逼的头盔，让他们穿着爽！
 tmux send-keys -t mc "give @a minecraft:netherite_leggings" Enter #给他们一些裤子，让他们穿着爽！
 tmux send-keys -t mc "give @a minecraft:dirt 128" Enter #给他们一些土，让他们磊堡垒用！
 tmux send-keys -t mc "give @a minecraft:black_bed" Enter #给他们一些黑色的床，让他们存档自己的复活点用！
-tmux send-keys -t mc "give @a minecraft:ender_pearl 6" Enter #给他们一些末影珍珠，让他们瞬移用！
-tmux send-keys -t mc "give @a minecraft:chorus_fruit 8" Enter #给他们一些紫松果，让他们瞬移用！
+tmux send-keys -t mc "give @a minecraft:ender_pearl 5" Enter #给他们一些末影珍珠，让他们瞬移用！
+tmux send-keys -t mc "give @a minecraft:chorus_fruit 15" Enter #给他们一些紫松果，让他们瞬移用！
 tmux send-keys -t mc "give @a minecraft:crossbow 1" Enter #给他们一些弩，让他们阴人用！
 tmux send-keys -t mc "give @a minecraft:bow" Enter #给他们一些弓，让他们远程进攻DPS！
 tmux send-keys -t mc "give @a minecraft:cake" Enter #给他们一些蛋糕，让他们猛一波的时候吃！
-tmux send-keys -t mc "give @a minecraft:arrow 32" Enter #给他们一些箭，让他们射个爽！
 tmux send-keys -t mc "give @a minecraft:spectral_arrow 64" Enter #给他们一些光灵箭，让他们射的更爽！
 tmux send-keys -t mc "give @a minecraft:golden_apple 3" Enter #给他们一些金苹果，让他们打一波的时候吃！
 tmux send-keys -t mc "give @a minecraft:totem_of_undying 2" Enter #给他们一些不死图腾，让他们可以选择暂时不死！
-tmux send-keys -t mc "give @a minecraft:lava_bucket 2" Enter #给他们一些岩浆桶，让他们坑人用！
+tmux send-keys -t mc "give @a minecraft:lava_bucket 1" Enter #给他们一些岩浆桶，让他们坑人用！
 tmux send-keys -t mc "give @a minecraft:water_bucket 1" Enter #给他们一些水桶，让他们坑人用！
-tmux send-keys -t mc "give @a minecraft:tnt 5" Enter #给他们一些tnt，让他们炸别人用！
+tmux send-keys -t mc "give @a minecraft:tnt 7" Enter #给他们一些tnt，让他们炸别人用！
 tmux send-keys -t mc "give @a minecraft:flint_and_steel 1" Enter #给他们一些打火机，让他们爽！
 tmux send-keys -t mc "give @a minecraft:shield 1" Enter #给他们一些盾牌，让他们防止被射了！
 tmux send-keys -t mc "give @a minecraft:spyglass 1" Enter #给他们一些八倍镜，让他们看！
-tmux send-keys -t mc "give @a minecraft:cobweb 8" Enter #给他们一些蜘蛛网，让他们逃命的时候留屁股后面恶心人！
-
-sleep 2
-
+tmux send-keys -t mc "give @a minecraft:cobweb 10" Enter #给他们一些蜘蛛网，让他们逃命的时候留屁股后面恶心人！
+tmux send-keys -t mc "say 最终确认：请大家立刻在床上睡眠一次！" Enter
+sleep 5
 tmux send-keys -t mc "say 在7秒后比赛正式开始！" Enter
+tmux send-keys -t mc "say 最终确认：请大家立刻在床上睡眠一次！" Enter
 sleep 1
 tmux send-keys -t mc "say 距离比赛开始：6" Enter
 sleep 1
@@ -151,7 +149,7 @@ tmux send-keys -t mc "say 【开始比赛中】正在设置玩家的等级为 0 
 tmux send-keys -t mc "experience set @a 0 levels" Enter
 sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在设置比赛世界宽度……" Enter
-tmux send-keys -t mc "worldborder set 150" Enter
+tmux send-keys -t mc "worldborder set 200" Enter
 sleep 0.1
 tmux send-keys -t mc "say 【开始比赛中】正在清空玩家特效。。。" Enter
 tmux send-keys -t mc "effect clear @a" Enter
@@ -182,7 +180,7 @@ sleep 0.1
 tmux send-keys -t mc "say 比赛已经正式开始！！" Enter
 sleep 3
 tmux send-keys -t mc "say 比赛时长：10分钟！杀敌最多获胜！" Enter
-tmux send-keys -t mc "worldborder add -120 550" Enter
+tmux send-keys -t mc "worldborder add -190 550" Enter
 sleep 300
 tmux send-keys -t mc "say 比赛剩余时长：5分钟！" Enter
 tmux send-keys -t mc "weather clear" Enter
@@ -206,6 +204,7 @@ tmux send-keys -t mc "say 比赛结束！!!!!!" Enter
 sleep 3
 tmux send-keys -t mc "say 比赛结束！!!!!!!!!!!!" Enter
 tmux send-keys -t mc "effect give @a minecraft:weekness 100 100" Enter
+tmux send-keys -t mc "gamemode spectator @a" Enter
 sleep 3
 # 脚本在这里退出了。不会再执行任何操作
 # 让所有玩家决出胜负！
