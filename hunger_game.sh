@@ -334,7 +334,7 @@ tmux send-keys -t mc "give @a minecraft:arrow 3" Enter
 tmux send-keys -t mc "give @a minecraft:iron_ore 16" Enter
 tmux send-keys -t mc "give @a minecraft:cooked_beef 16" Enter
 tmux send-keys -t mc "give @a minecraft:crossbow 1" Enter
-tmux send-keys -t mc "say 【提示】实在不知道如何取胜？别忘了，这是一款开源的游戏。切出来开个网页阅读它的源码可以让你找到线索来翻盘哦： https://git.aiursoft.cn/Anduin" Enter
+tmux send-keys -t mc "say 【提示】实在不知道如何取胜？别忘了，这是一款开源的游戏。切出来开个网页阅读它的源码可以让你找到线索来翻盘哦：https://gitlab.aiursoft.cn/anduin/bashgamesforminecraft" Enter
 tmux send-keys -t mc "difficulty hard" Enter
 sleep 100
 
