@@ -1,4 +1,3 @@
-
 tmux send-keys -t mc "say 服务器正在重置世界配置为自由模式……" Enter
 sleep 1
 
@@ -57,6 +56,11 @@ sleep 1
 tmux send-keys -t mc "say 正在设置死亡惩罚丢失物品……" Enter
 sleep 1
 tmux send-keys -t mc "gamerule keepInventory false" Enter
+sleep 1
+
+tmux send-keys -t mc "say 正在设置缓慢的种植速度……" Enter
+sleep 1
+tmux send-keys -t mc "gamerule randomTickSpeed 2" Enter
 sleep 1
 
 tmux send-keys -t mc "say 正在给玩家增加血量上限……" Enter
